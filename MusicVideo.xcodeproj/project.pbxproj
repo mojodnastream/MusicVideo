@@ -54,14 +54,46 @@
 		48F17F051D46CFD0007850BD /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				48F17F061D46CFD0007850BD /* AppDelegate.swift */,
-				48F17F081D46CFD0007850BD /* ViewController.swift */,
-				48F17F0A1D46CFD0007850BD /* Main.storyboard */,
-				48F17F0D1D46CFD0007850BD /* Assets.xcassets */,
-				48F17F0F1D46CFD0007850BD /* LaunchScreen.storyboard */,
-				48F17F121D46CFD0007850BD /* Info.plist */,
+				48F17F1B1D47CC6D007850BD /* Supporting Files */,
+				48F17F181D47CC2A007850BD /* Model */,
+				48F17F191D47CC39007850BD /* Controller */,
+				48F17F1A1D47CC48007850BD /* View */,
 			);
 			path = MusicVideo;
+			sourceTree = "<group>";
+		};
+		48F17F181D47CC2A007850BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48F17F191D47CC39007850BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F081D46CFD0007850BD /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		48F17F1A1D47CC48007850BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F0F1D46CFD0007850BD /* LaunchScreen.storyboard */,
+				48F17F0A1D46CFD0007850BD /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		48F17F1B1D47CC6D007850BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F061D46CFD0007850BD /* AppDelegate.swift */,
+				48F17F0D1D46CFD0007850BD /* Assets.xcassets */,
+				48F17F121D46CFD0007850BD /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
