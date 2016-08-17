@@ -26,16 +26,11 @@ class ViewController: UIViewController {
             print("name = \(item.vName)")
         }
         
-        doTest()
+        for (index, item) in videos.enumerate() {
+            print("\(index) name = \(item.vName)")
+        }
         
     }
     
-    func doTest() {
-        for item in videos {
-            print("mytest name = \(item.vName)")
-        }
-    }
-    
-
 }
 
