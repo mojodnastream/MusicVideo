@@ -15,6 +15,7 @@
 		48F17F1D1D47D120007850BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F1C1D47D120007850BD /* APIManager.swift */; };
 		48F17F201D496FCD007850BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F1F1D496FCD007850BD /* Constants.swift */; };
 		48F17F221D49712B007850BD /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F211D49712B007850BD /* MusicVideo.swift */; };
+		48FBE18B1D651E51005F5791 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FBE18A1D651E51005F5791 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		48F17F1C1D47D120007850BD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		48F17F1F1D496FCD007850BD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48F17F211D49712B007850BD /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		48FBE1881D651E50005F5791 /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
+		48FBE1891D651E51005F5791 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		48FBE18A1D651E51005F5791 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		48F17F051D46CFD0007850BD /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				48FBE1871D651DC5005F5791 /* Obj-c */,
 				48F17F1E1D496F8C007850BD /* Utils */,
 				48F17F1B1D47CC6D007850BD /* Supporting Files */,
 				48F17F181D47CC2A007850BD /* Model */,
@@ -111,6 +116,16 @@
 				48F17F1F1D496FCD007850BD /* Constants.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		48FBE1871D651DC5005F5791 /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				48FBE1891D651E51005F5791 /* Reachability.h */,
+				48FBE18A1D651E51005F5791 /* Reachability.m */,
+				48FBE1881D651E50005F5791 /* MusicVideo-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +204,7 @@
 				48F17F091D46CFD0007850BD /* ViewController.swift in Sources */,
 				48F17F221D49712B007850BD /* MusicVideo.swift in Sources */,
 				48F17F071D46CFD0007850BD /* AppDelegate.swift in Sources */,
+				48FBE18B1D651E51005F5791 /* Reachability.m in Sources */,
 				48F17F201D496FCD007850BD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,10 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.mojo.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -315,10 +334,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.mojo.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -341,6 +362,7 @@
 				48F17F171D46CFD0007850BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
