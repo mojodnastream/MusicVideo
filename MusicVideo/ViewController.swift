@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged:", name: "ReachStatusChanged", object: nil)
         
         reachabilityStatusChanged()
