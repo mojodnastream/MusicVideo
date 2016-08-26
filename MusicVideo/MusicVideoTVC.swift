@@ -20,7 +20,6 @@ class MusicVideoTVC: UITableViewController {
         
         reachabilityStatusChanged()
         
-       
     }
     
     func didLoadData(videos: [Videos]) {
@@ -40,7 +39,7 @@ class MusicVideoTVC: UITableViewController {
     func reachabilityStatusChanged() {
         switch reachabilityStatus {
         case NOACCESS :
-            view.backgroundColor = UIColor.redColor()
+            //view.backgroundColor = UIColor.redColor()
             
             dispatch_async(dispatch_get_main_queue()) {
                 let alert = UIAlertController(title: "No Internet Access", message: "Please get your internets sorted out", preferredStyle: .Alert)
@@ -65,7 +64,7 @@ class MusicVideoTVC: UITableViewController {
             }
         
         default:
-            view.backgroundColor = UIColor.greenColor()
+            //view.backgroundColor = UIColor.greenColor()
             
             if videos.count > 0 {
                 print("we're good, dont run API")
@@ -99,14 +98,15 @@ class MusicVideoTVC: UITableViewController {
         return videos.count
     }
 
+    private struct storybaord {
+        static let cellReuseIdentifier = "cell"
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-
-        let video = videos[indexPath.row]
         
-        cell.textLabel?.text = ("\(indexPath.row + 1 )")
-        cell.detailTextLabel?.text = video.vName
+        let cell = tableView.dequeueReusableCellWithIdentifier(storybaord.cellReuseIdentifier, forIndexPath: indexPath) as!MusicVideoTableViewCell
+        
+        cell.video = videos[indexPath.row]
 
         return cell
     }
