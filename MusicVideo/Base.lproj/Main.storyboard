@@ -62,7 +62,7 @@
                                     <outlet property="musicImage" destination="cKw-eQ-vKJ" id="bA2-ea-Dwf"/>
                                     <outlet property="musicTitle" destination="mAl-bP-tAf" id="073-cz-AzQ"/>
                                     <outlet property="rank" destination="cpG-38-Dok" id="Q6V-Ja-aS0"/>
-                                    <segue destination="5jm-Zm-Z39" kind="show" id="rwf-2r-g4L"/>
+                                    <segue destination="5jm-Zm-Z39" kind="show" identifier="musicDetail" id="rwf-2r-g4L"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,7 +75,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSE-b4-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842" y="-3"/>
+            <point key="canvasLocation" x="2070" y="-225"/>
         </scene>
         <!--Music Video DetailVC-->
         <scene sceneID="Jku-vc-mh5">
@@ -89,7 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-Or-nCe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-Or-nCe">
                                 <rect key="frame" x="1" y="132" width="599" height="282"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwU-eT-66f">
@@ -106,17 +106,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="xZB-vJ-t7G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t81-jI-0QM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t81-jI-0QM">
                                 <rect key="frame" x="504" y="416" width="76" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="kRx-be-t28"/>
                                     <constraint firstAttribute="width" constant="76" id="oX5-3J-84U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -125,7 +125,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="NqR-bk-d2N"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -158,10 +158,17 @@
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
+                    <connections>
+                        <outlet property="vGenre" destination="3av-wJ-8tg" id="L7b-6Q-sl8"/>
+                        <outlet property="vName" destination="bwU-eT-66f" id="ehQ-al-BeB"/>
+                        <outlet property="vPrice" destination="t81-jI-0QM" id="QL4-kf-c6e"/>
+                        <outlet property="vRights" destination="wJM-j5-fq5" id="B4F-V9-uKY"/>
+                        <outlet property="videoImage" destination="Gbr-Or-nCe" id="a5C-ia-rQz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2op-wa-fLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="-3"/>
+            <point key="canvasLocation" x="2675" y="-369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HpP-8a-SXS">
