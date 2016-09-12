@@ -21,7 +21,6 @@ class MusicVideoTVC: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
         
-        
         reachabilityStatusChanged()
         
     }
