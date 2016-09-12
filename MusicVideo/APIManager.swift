@@ -24,6 +24,7 @@ class APIManager {
             if error != nil {
 
                 print(error!.localizedDescription)
+                
             } else {
                 
                 print(data)
