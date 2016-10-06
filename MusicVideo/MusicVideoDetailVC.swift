@@ -35,7 +35,7 @@ class MusicVideoDetailVC: UIViewController {
         }
 
         // Do any additional setup after loading the view.
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoDetailVC.preferredFontChanged), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     func preferredFontChanged() {
