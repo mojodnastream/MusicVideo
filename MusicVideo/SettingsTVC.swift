@@ -23,7 +23,7 @@ class SettingsTVC: UITableViewController {
         
         tableView.alwaysBounceVertical = false
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SettingsTVC.preferredFontChanged), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SettingsTVC.preferredFontChanged), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
 
 
         // Uncomment the following line to preserve selection between presentations
@@ -34,18 +34,18 @@ class SettingsTVC: UITableViewController {
     }
     
     func preferredFontChanged() {
-        aboutDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        feedbackDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        securityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        bestImageDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        APICnt.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        aboutDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        feedbackDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        securityDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        bestImageDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        APICnt.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         
     }
     
     deinit
     {
        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name:UIContentSizeCategoryDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name:NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
         
     }
 

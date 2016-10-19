@@ -28,14 +28,14 @@ class MusicVideoDetailVC: UIViewController {
         vRights.text = videos.vRights
         
         if videos.vImageData != nil {
-            videoImage.image = UIImage(data: videos.vImageData!)
+            videoImage.image = UIImage(data: videos.vImageData! as Data)
         }
         else {
             videoImage.image = UIImage(named: "imageNotAvailable")
         }
 
         // Do any additional setup after loading the view.
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoDetailVC.preferredFontChanged), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(MusicVideoDetailVC.preferredFontChanged), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
     }
     
     func preferredFontChanged() {
@@ -45,7 +45,7 @@ class MusicVideoDetailVC: UIViewController {
     //blow out the observers
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name:UIContentSizeCategoryDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name:NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
     }
 
 
