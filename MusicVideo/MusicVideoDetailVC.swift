@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class MusicVideoDetailVC: UIViewController {
     
     var videos:Videos!
     
+    @IBAction func playVideo(_ sender: UIBarButtonItem) {
+        
+        let url = NSURL(string: videos.vVideoUrl)!
+        let player = AVPlayer(url: url as URL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player?.play()
+        }
+        
+        
+    }
     @IBOutlet weak var vName: UILabel!
     @IBOutlet weak var vGenre: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
@@ -33,6 +47,8 @@ class MusicVideoDetailVC: UIViewController {
         else {
             videoImage.image = UIImage(named: "imageNotAvailable")
         }
+        
+        
 
         // Do any additional setup after loading the view.
          NotificationCenter.default.addObserver(self, selector: #selector(MusicVideoDetailVC.preferredFontChanged), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
