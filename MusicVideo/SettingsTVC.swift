@@ -21,6 +21,13 @@ class SettingsTVC: UITableViewController {
         }
         
     }
+    @IBAction func valueChanged(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        defaults.set(Int(sliderCnt.value), forKey: "APICNT")
+        APICnt.text = ("\(Int(sliderCnt.value))")
+    }
+    
     @IBOutlet weak var aboutDisplay: UILabel!
     @IBOutlet weak var feedbackDisplay: UILabel!
     @IBOutlet weak var securityDisplay: UILabel!
@@ -28,6 +35,7 @@ class SettingsTVC: UITableViewController {
     @IBOutlet weak var bestImageDisplay: UILabel!
     @IBOutlet weak var APICnt: UILabel!
     @IBOutlet weak var sliderCnt: UISlider!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +48,14 @@ class SettingsTVC: UITableViewController {
 
         
         touchID.isOn = UserDefaults.standard.bool(forKey: "SecSetting")
+        
+        if (UserDefaults.standard.object(forKey: "APICNT") != nil) {
+            let theValue = UserDefaults.standard.object(forKey: "APICNT") as! Int
+            APICnt.text = "\(theValue)"
+            sliderCnt.value = Float(theValue)
+            
+            
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
