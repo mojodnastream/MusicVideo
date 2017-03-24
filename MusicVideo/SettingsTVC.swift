@@ -34,8 +34,11 @@ class SettingsTVC: UITableViewController {
     @IBOutlet weak var touchID: UISwitch!
     @IBOutlet weak var bestImageDisplay: UILabel!
     @IBOutlet weak var APICnt: UILabel!
+    @IBOutlet weak var dragSlider: UILabel!
     @IBOutlet weak var sliderCnt: UISlider!
+    @IBOutlet weak var numberCounter: UILabel!
     
+    @IBOutlet weak var numberOfVideos: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +58,10 @@ class SettingsTVC: UITableViewController {
             sliderCnt.value = Float(theValue)
             
             
+        } else {
+            sliderCnt.value = 10.0
+            APICnt.text = ("\(Int(sliderCnt.value))")
+            
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -73,7 +80,9 @@ class SettingsTVC: UITableViewController {
         securityDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         bestImageDisplay.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         APICnt.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
-        
+        numberOfVideos.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        dragSlider.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        numberCounter.font  = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
     }
     
     deinit

@@ -18,7 +18,7 @@ let NOACCESS = "No Internet Access"
 
 let WWAN = "Cellular Access Available"
 
-let APIString = "https://itunes.apple.com/us/rss/topmusicvideos/limit=199/json"
+//let APIString = "https://itunes.apple.com/us/rss/topmusicvideos/limit=199/json"
 
 
 
