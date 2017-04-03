@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
+class MusicVideoTVC: UITableViewController {
   
-    var videos = [Videos]()
-    var filterSearch = [Videos]()
+    var videos = [Video]()
+    var filterSearch = [Video]()
     
     let resultSearchController = UISearchController(searchResultsController: nil)
     
@@ -36,7 +36,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         print("the preferred font has changed")
     }
     
-    func didLoadData(_ videos: [Videos]) {
+    func didLoadData(_ videos: [Video]) {
         self.videos = videos
         for item in videos {
             print("name = \(item.vName)")
@@ -133,7 +133,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         //call API
         getAPICount()
         let api = APIManager()
-        api.loadData(APIString, completion: didLoadData)
+        api.loadData(urlString: APIString, completion: didLoadData)
     }
     
     //blow out the observers
@@ -223,7 +223,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         if segue.identifier == storybaord.sequeIdentifier {
             if let indexpath = tableView.indexPathForSelectedRow {
                 
-                let video: Videos
+                let video: Video
                 
                 if resultSearchController.isActive {
                     video = filterSearch[indexpath.row]
@@ -240,17 +240,28 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         }
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        searchController.searchBar.text!.lowercased()
-        filterSearch(searchText: searchController.searchBar.text!)
-    }
+//    func updateSearchResults(for searchController: UISearchController) {
+//        searchController.searchBar.text!.lowercased()
+//        filterSearch(searchText: searchController.searchBar.text!)
+//    }
     
     func filterSearch(searchText: String) {
         filterSearch = videos.filter { videos  in
-            return videos.vArtist.lowercased().contains(searchText.lowercased())
+            return
+                videos.vArtist.lowercased().contains(searchText.lowercased()) ||
+                videos.vName.lowercased().contains(searchText.lowercased()) ||
+                "\(videos.vRank)".lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
     }
     
+
+}
+
+extension MusicVideoTVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        searchController.searchBar.text!.lowercased()
+        filterSearch(searchText: searchController.searchBar.text!)
+    }
 
 }

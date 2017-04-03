@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e7I-W6-cF6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e7I-W6-cF6">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,8 +43,8 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Music Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-bP-tAf">
-                                            <rect key="frame" x="136" y="62" width="456" height="62"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-bP-tAf">
+                                            <rect key="frame" x="136" y="62" width="270" height="62"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -255,32 +255,32 @@
                                         <rect key="frame" x="0.0" y="312" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bLj-PB-lLv" id="2Em-9b-bP3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="111.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Sfl-OI-D7S">
-                                                    <rect key="frame" x="-2" y="54" width="418" height="31"/>
-                                                    <connections>
-                                                        <action selector="valueChanged:" destination="HgI-tt-U4L" eventType="valueChanged" id="dOC-O8-Pnu"/>
-                                                    </connections>
-                                                </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag The Slider Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-PU-XhL">
                                                     <rect key="frame" x="0.0" y="25" width="414" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="MBR-5t-qwX"/>
+                                                        <constraint firstAttribute="height" constant="21" id="mTl-Wa-5WE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Sfl-OI-D7S">
+                                                    <rect key="frame" x="37" y="54" width="339" height="31"/>
+                                                    <connections>
+                                                        <action selector="valueChanged:" destination="HgI-tt-U4L" eventType="valueChanged" id="dOC-O8-Pnu"/>
+                                                    </connections>
+                                                </slider>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="trailing" secondItem="Sfl-OI-D7S" secondAttribute="trailing" id="UqO-TV-n5i"/>
-                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="leading" secondItem="Sfl-OI-D7S" secondAttribute="leading" id="Ynr-Er-XGT"/>
-                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="leading" secondItem="2Em-9b-bP3" secondAttribute="leading" id="gs7-xC-XnC"/>
-                                                <constraint firstItem="Sfl-OI-D7S" firstAttribute="top" secondItem="Uqd-PU-XhL" secondAttribute="bottom" constant="8" symbolic="YES" id="i9n-Tk-mD4"/>
-                                                <constraint firstAttribute="trailing" secondItem="Uqd-PU-XhL" secondAttribute="trailing" id="lcB-rz-Fhe"/>
-                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="top" secondItem="2Em-9b-bP3" secondAttribute="topMargin" constant="17" id="sEu-yd-uNh"/>
+                                                <constraint firstItem="Sfl-OI-D7S" firstAttribute="top" secondItem="Uqd-PU-XhL" secondAttribute="bottom" constant="8" symbolic="YES" id="At8-Pd-3f4"/>
+                                                <constraint firstItem="Sfl-OI-D7S" firstAttribute="leading" secondItem="2Em-9b-bP3" secondAttribute="leadingMargin" constant="31" id="BHM-Ks-Qyx"/>
+                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="leading" secondItem="2Em-9b-bP3" secondAttribute="leading" id="TN1-LM-D3E"/>
+                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="top" secondItem="2Em-9b-bP3" secondAttribute="topMargin" constant="17" id="UhE-Q0-sVX"/>
+                                                <constraint firstItem="Uqd-PU-XhL" firstAttribute="centerX" secondItem="Sfl-OI-D7S" secondAttribute="centerX" id="iGo-wC-LWC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uqd-PU-XhL" secondAttribute="trailing" id="xtO-0w-e6S"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -307,7 +307,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omW-aG-Kod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="317"/>
+            <point key="canvasLocation" x="1698.5507246376812" y="316.304347826087"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TO4-eK-Sso">

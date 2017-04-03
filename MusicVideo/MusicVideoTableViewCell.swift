@@ -12,7 +12,7 @@ class MusicVideoTableViewCell: UITableViewCell {
 
     //PUT ALL LOGIC IN THE CELL, NOT THE VC
     
-    var video : Videos? {
+    var video : Video? {
         didSet {
             updateCell()
         }
@@ -43,7 +43,7 @@ class MusicVideoTableViewCell: UITableViewCell {
         
     }
     
-    func GetVideoImage(_ video: Videos, imageView : UIImageView) {
+    func GetVideoImage(_ video: Video, imageView : UIImageView) {
         
         
         //DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {

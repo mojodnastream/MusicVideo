@@ -10,60 +10,54 @@ import Foundation
 
 class APIManager {
     
-    func loadData(_ urlString:String, completion: @escaping ([Videos])-> Void) {
+    func loadData(urlString:String, completion: @escaping ([Video]) -> Void ) {
         
         let config = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: config)
         
-        //let session = NSURLSession.sharedSession()
-        let url = URL(string: urlString)!
+        //        let session = NSURLSession.sharedSession()
+        let url = NSURL(string: urlString)!
         
-        let task = session.dataTask(with: url, completionHandler: {
+        let task = session.dataTask(with: url as URL) {
             (data, response, error) -> Void in
             
             if error != nil {
-
                 print(error!.localizedDescription)
-                
             } else {
                 
-                print(data)
+                let videos = self.parseJson(data: data as NSData?)
                 
-                do {
-                    
-                    if let json = try JSONSerialization.jsonObject(with: data!,
-                        options: .allowFragments) as? JSONDictionary,
-                        let feed = json["feed"] as? JSONDictionary,
-                        let entries = feed["entry"] as? JSONArray {
-                    
-                        var videos = [Videos]()
-                        for(index, entry) in entries.enumerated() {
-                            let entry = Videos(data: entry as! JSONDictionary)
-                            entry.vRank = index + 1
-                            videos.append(entry)
-                        }
-                        
-                        let i = videos.count
-                        print("iTunesAPIManager = total count --> \(i)")
-                        print(" ")
-                        
-                        //let priority = DispatchQueue.GlobalQueuePriority.high
-                        DispatchQueue.global(qos: .default).sync {
-                            //DispatchQueue.global(priority: priority).async {
-                            DispatchQueue.main.async {
-                                completion(videos)
-                            }
-                        }
-                    
+                    DispatchQueue.global(qos: .default).sync {
+                    DispatchQueue.main.async {
+                        completion(videos)
                     }
-                } catch {
-                    
-                    print("error in NSJSONSerialization")
-                
                 }
-            
             }
-        }) 
+        }
         task.resume()
     }
+    
+    func parseJson(data: NSData?) -> [Video] {
+        
+        do {
+            
+            if let json = try JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.allowFragments) as AnyObject? {
+                
+                return JsonDataExtractor.extractVideoDataFromJson(videoDataObject: json)
+            }
+        }
+            
+        catch {
+            print("Failed to parse data: \(error)")
+        }
+        
+        return [Video]()
+    }
+    
+    
 }
+
+
+
+
+
