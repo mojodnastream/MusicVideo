@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482EFC8A1D82219400223950 /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482EFC891D82219400223950 /* MusicVideoDetailVC.swift */; };
+		483C24A01D6CEFCD0064B6BB /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483C249F1D6CEFCD0064B6BB /* MusicVideoTVC.swift */; };
+		483C24A21D6E4A0A0064B6BB /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483C24A11D6E4A0A0064B6BB /* MusicVideoTableViewCell.swift */; };
+		484F3D401E92DC3E004BDB5E /* JsonDataExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484F3D3F1E92DC3E004BDB5E /* JsonDataExtractor.swift */; };
+		489807AD1DB020C500FD1B9D /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489807AC1DB020C500FD1B9D /* SettingsTVC.swift */; };
 		48F17F071D46CFD0007850BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F061D46CFD0007850BD /* AppDelegate.swift */; };
-		48F17F091D46CFD0007850BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F081D46CFD0007850BD /* ViewController.swift */; };
 		48F17F0C1D46CFD0007850BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F17F0A1D46CFD0007850BD /* Main.storyboard */; };
 		48F17F0E1D46CFD0007850BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F17F0D1D46CFD0007850BD /* Assets.xcassets */; };
 		48F17F111D46CFD0007850BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F17F0F1D46CFD0007850BD /* LaunchScreen.storyboard */; };
+		48F17F1D1D47D120007850BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F1C1D47D120007850BD /* APIManager.swift */; };
+		48F17F201D496FCD007850BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F1F1D496FCD007850BD /* Constants.swift */; };
+		48F17F221D49712B007850BD /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F17F211D49712B007850BD /* MusicVideo.swift */; };
+		48FBE18B1D651E51005F5791 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FBE18A1D651E51005F5791 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		482EFC891D82219400223950 /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
+		483C249F1D6CEFCD0064B6BB /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
+		483C24A11D6E4A0A0064B6BB /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
+		484F3D3F1E92DC3E004BDB5E /* JsonDataExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDataExtractor.swift; sourceTree = "<group>"; };
+		489807AC1DB020C500FD1B9D /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		48F17F031D46CFD0007850BD /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F17F061D46CFD0007850BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48F17F081D46CFD0007850BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48F17F0B1D46CFD0007850BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48F17F0D1D46CFD0007850BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48F17F101D46CFD0007850BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48F17F121D46CFD0007850BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F17F1C1D47D120007850BD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		48F17F1F1D496FCD007850BD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		48F17F211D49712B007850BD /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		48FBE1881D651E50005F5791 /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
+		48FBE1891D651E51005F5791 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		48FBE18A1D651E51005F5791 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,72 @@
 		48F17F051D46CFD0007850BD /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				48F17F061D46CFD0007850BD /* AppDelegate.swift */,
-				48F17F081D46CFD0007850BD /* ViewController.swift */,
-				48F17F0A1D46CFD0007850BD /* Main.storyboard */,
-				48F17F0D1D46CFD0007850BD /* Assets.xcassets */,
-				48F17F0F1D46CFD0007850BD /* LaunchScreen.storyboard */,
-				48F17F121D46CFD0007850BD /* Info.plist */,
+				48FBE1871D651DC5005F5791 /* Obj-c */,
+				48F17F1E1D496F8C007850BD /* Utils */,
+				48F17F1B1D47CC6D007850BD /* Supporting Files */,
+				48F17F181D47CC2A007850BD /* Model */,
+				48F17F191D47CC39007850BD /* Controller */,
+				48F17F1A1D47CC48007850BD /* View */,
 			);
 			path = MusicVideo;
+			sourceTree = "<group>";
+		};
+		48F17F181D47CC2A007850BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F211D49712B007850BD /* MusicVideo.swift */,
+				48F17F1C1D47D120007850BD /* APIManager.swift */,
+				484F3D3F1E92DC3E004BDB5E /* JsonDataExtractor.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48F17F191D47CC39007850BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				489807AC1DB020C500FD1B9D /* SettingsTVC.swift */,
+				482EFC891D82219400223950 /* MusicVideoDetailVC.swift */,
+				483C24A11D6E4A0A0064B6BB /* MusicVideoTableViewCell.swift */,
+				483C249F1D6CEFCD0064B6BB /* MusicVideoTVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		48F17F1A1D47CC48007850BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F0F1D46CFD0007850BD /* LaunchScreen.storyboard */,
+				48F17F0A1D46CFD0007850BD /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		48F17F1B1D47CC6D007850BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F061D46CFD0007850BD /* AppDelegate.swift */,
+				48F17F0D1D46CFD0007850BD /* Assets.xcassets */,
+				48F17F121D46CFD0007850BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48F17F1E1D496F8C007850BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				48F17F1F1D496FCD007850BD /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		48FBE1871D651DC5005F5791 /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				48FBE1891D651E51005F5791 /* Reachability.h */,
+				48FBE18A1D651E51005F5791 /* Reachability.m */,
+				48FBE1881D651E50005F5791 /* MusicVideo-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,12 +167,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = LytxServices;
 				TargetAttributes = {
 					48F17F021D46CFD0007850BD = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NH6LXYTJA3;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -136,8 +213,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F17F091D46CFD0007850BD /* ViewController.swift in Sources */,
+				48F17F1D1D47D120007850BD /* APIManager.swift in Sources */,
+				482EFC8A1D82219400223950 /* MusicVideoDetailVC.swift in Sources */,
+				489807AD1DB020C500FD1B9D /* SettingsTVC.swift in Sources */,
+				48F17F221D49712B007850BD /* MusicVideo.swift in Sources */,
+				483C24A21D6E4A0A0064B6BB /* MusicVideoTableViewCell.swift in Sources */,
 				48F17F071D46CFD0007850BD /* AppDelegate.swift in Sources */,
+				48FBE18B1D651E51005F5791 /* Reachability.m in Sources */,
+				48F17F201D496FCD007850BD /* Constants.swift in Sources */,
+				484F3D401E92DC3E004BDB5E /* JsonDataExtractor.swift in Sources */,
+				483C24A01D6CEFCD0064B6BB /* MusicVideoTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +262,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -200,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -223,8 +310,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,9 +329,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -252,10 +342,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.mojo.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -263,10 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gary.mojo.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -289,6 +386,7 @@
 				48F17F171D46CFD0007850BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
